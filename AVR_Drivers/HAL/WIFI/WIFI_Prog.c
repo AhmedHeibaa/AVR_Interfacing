@@ -1,26 +1,35 @@
 /*
- * Buzzer_Config.h
+ * WIFI_Prog.c
  *
  *  Created on: ???/???/????
  *      Author: dell
  */
 
-#ifndef HAL_BUZZER_BUZZER_CONFIG_H_
-#define HAL_BUZZER_BUZZER_CONFIG_H_
+/*--------------------------------------------------------------------------------------------*/
+/*   INCLUDES   */
+/*--------------------------------------------------------------------------------------------*/
+#include "UART_Interface.h"
 
 /*--------------------------------------------------------------------------------------------*/
-/*   SELECT MICROCONTROLERS PINS   */
+/*   FUNCTION BODY   */
 /*--------------------------------------------------------------------------------------------*/
-#define BUZZER_PIN             PC6_PIN
+void H_WIFI_Void_WIFIInit(void)
+{
+	M_UART_Void_UARTInit();
+}
 
 /*--------------------------------------------------------------------------------------------*/
-/*   SELECT LED BUZZER ON TIME IN MILLI SECONDS   */
+/*   FUNCTION BODY   */
 /*--------------------------------------------------------------------------------------------*/
-#define BUZZER_ON_TIME         80
+void H_WIFI_Void_WIFIWrite(u8 Copy_U8_Data)
+{
+	M_UART_Void_UARTWrite(Copy_U8_Data);
+}
 
 /*--------------------------------------------------------------------------------------------*/
-/*   SELECT LED BUZZER OFF TIME IN MILLI SECONDS   */
+/*   FUNCTION BODY   */
 /*--------------------------------------------------------------------------------------------*/
-#define BUZZER_OFF_TIME        60
-
-#endif /* HAL_BUZZER_BUZZER_CONFIG_H_ */
+u8   H_WIFI_U8_WIFIRead(void)
+{
+	return M_UART_U8_UARTRead();
+}

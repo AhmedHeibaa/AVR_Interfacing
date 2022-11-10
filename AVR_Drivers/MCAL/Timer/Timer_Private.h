@@ -8,6 +8,16 @@
 #ifndef MCAL_TIMER_TIMER_PRIVATE_H_
 #define MCAL_TIMER_TIMER_PRIVATE_H_
 
+/*--------------------------------------------------------------------------------------------*/
+/*   DEFINES   */
+/*--------------------------------------------------------------------------------------------*/
+#define NORMAL_MODE                    1
+#define CTC_MODE                       2
+#define FAST_PWM_MODE                  3
+#define PHASE_CORRECT_PWM_MODE         4
+#define NON_INVERTED                   1
+#define INVERTED                       2
+
 /*   REGISTERS   */
 #define TCCR0_REG     *(volatile u8*)0x53
 #define TIMSK_REG     *(volatile u8*)0x59
@@ -18,17 +28,14 @@
 #define OCR1A_REG     *(volatile u16*)0x4A
 #define ICR1_REG      *(volatile u16*)0x46
 
-
-/*  TCCR0_REG  */
-
-#define FOC0_BIT    7
-#define WGM00_BIT   6
-#define COM01_BIT   5
-#define COM00_BIT   4
-#define WGM01_BIT   3
-#define CS02_BIT    2
-#define CS01_BIT    1
-#define CS00_BIT    0
+/*   TCCR0 BITS   */
+#define WGM00_BIT                  6
+#define COM01_BIT                  5
+#define COM00_BIT                  4
+#define WGM01_BIT                  3
+#define CS02_BIT                   2
+#define CS01_BIT                   1
+#define CS00_BIT                   0
 
 /*   TIMSK BITS   */
 #define OCIE0_BIT                  1

@@ -1,21 +1,23 @@
 /*
- * ADC_Config.h
+ * WIFI_Interface.h
  *
  *  Created on: ???/???/????
  *      Author: dell
  */
 
-#ifndef MCAL_ADC_ADC_CONFIG_H_
-#define MCAL_ADC_ADC_CONFIG_H_
+#ifndef HAL_WIFI_WIFI_INTERFACE_H_
+#define HAL_WIFI_WIFI_INTERFACE_H_
 
 /*--------------------------------------------------------------------------------------------*/
-/*   ADC_VREF OPTIONS : [ AVCC , _2V5 , AREF_PIN ]   */
+/*   INCLUDES   */
 /*--------------------------------------------------------------------------------------------*/
-#define ADC_VREF          AVCC
+#include "UART_Interface.h"
 
 /*--------------------------------------------------------------------------------------------*/
-/*   ADC_PRESCALER_DV OPTIONS : [ 128 , 64 ]   */
+/*   PROTOTYPES   */
 /*--------------------------------------------------------------------------------------------*/
-#define ADC_PRESCALER_DV          128
+void H_WIFI_Void_WIFIInit(void);
+void H_WIFI_Void_WIFIWrite(u8);
+u8   H_WIFI_U8_WIFIRead(void);
 
-#endif /* MCAL_ADC_ADC_CONFIG_H_ */
+#endif /* HAL_WIFI_WIFI_INTERFACE_H_ */

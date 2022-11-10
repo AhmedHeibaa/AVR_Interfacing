@@ -41,4 +41,5 @@ S * Timer_Config.h
 /*--------------------------------------------------------------------------------------------*/
 #define TIMER1_PRESCALER_DF      1024
 
+
 #endif /* MCAL_TIMER_TIMER_CONFIG_H_ */
